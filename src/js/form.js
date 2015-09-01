@@ -31,8 +31,7 @@ if (cookie.read("sfm-sent")) {
 
 form.on("click", ".submit", function() {
 
-  var self = this;
-  if (self.disabled) return;
+  if (this.disabled) return;
 
   //handle form elements correctly
   var packet = formUtil.package(form);
@@ -46,7 +45,7 @@ form.on("click", ".submit", function() {
     return;
   }
   
-  self.disabled = true;
+  this.disabled = true;
 
   var submission = $.ajax({
     url: endpoint,
@@ -57,27 +56,21 @@ form.on("click", ".submit", function() {
   panel.addClass("sending");
   message.html("Submitting your information...");
 
-  submission.done(function(data) {
+  submission.done(data => {
     panel.addClass("sent");
     message.html("Thanks!");
     cookie.write("sfm-sent", true);
   });
 
-  submission.fail(function() {
+  submission.fail(() => {
     panel.removeClass("sending");
-    self.disabled = false;
+    this.disabled = false;
   });
 
 });
 
-$(document.body).on("click", ".show-form", function() {
-  panel.toggleClass("show");
-});
+$(document.body).on("click", ".show-form", () => panel.toggleClass("show"));
 
-form.on("focus", "input,textarea", function() {
-  panel.removeClass("invalid");
-});
+form.on("focus", "input,textarea", () => panel.removeClass("invalid"));
 
-window.clearSent = function() {
-  cookie.clear("sfm-sent");
-};
+window.clearSent = () => cookie.clear("sfm-sent");

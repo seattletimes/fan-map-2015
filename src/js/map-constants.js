@@ -5,7 +5,7 @@ if (window.players) for (var i = 0; i < players.length; i++) {
 }
 
 module.exports = {
-  playerMap: playerMap,
+  playerMap,
   views: {
     seattle: [
       [47.72, -122.45],
