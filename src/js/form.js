@@ -16,7 +16,7 @@ Form user-flow:
 */
 
 var panel = $(".form-panel");
-var endpoint = "https://script.google.com/macros/s/AKfycbzEAj3ahfJd45qrRuW2by7O2V08mp7byGULbFZiqN_mUpQHxB5d/exec";
+var endpoint = "https://script.google.com/macros/s/AKfycbwsjAjGU5bFDPxGC6RxuPEK3R_IPG1zGig869XZQq-KI6pdIg/exec";
 
 var message = panel.find(".message");
 var form = panel.find(".form");

@@ -102,7 +102,7 @@ var facade = {
   instance: map
 };
 
-facade.switchLayer("stats", "favorite");
+facade.switchLayer("cluster", "stories");
 
 $(".switch-layer").on("click", function() {
   facade.switchLayer(this.getAttribute("data-layer"), this.getAttribute("data-color"));

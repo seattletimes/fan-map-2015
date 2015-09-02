@@ -11,7 +11,7 @@ module.exports = function(grunt) {
   grunt.registerTask("export-json", "Export filtered JSON", function() {
     grunt.task.requires("json");
 
-    var responses = grunt.data.json.FanMap_Responses;
+    var responses = grunt.data.json.FanMap2015_responses;
 
     //remove the unapproved and featured items
     var filtered = responses.filter(function(row) {

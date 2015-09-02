@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
     grunt.task.requires("json");
 
-    var raw = grunt.data.json.FanMap_Responses;
+    var raw = grunt.data.json.FanMap2015_responses;
     var zones = {};
 
     var getZone = function(zone) {

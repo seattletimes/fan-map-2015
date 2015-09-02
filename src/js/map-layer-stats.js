@@ -52,9 +52,7 @@ var init = function(world, states, stats) {
 
   Object.keys(stats).forEach(function(zone) {
     if (stats[zone].total > most) most = stats[zone].total;
-    var convert = function(player) {
-      player.name = constants.playerMap[player.player];
-    };
+    var convert = p => p.name = constants.playerMap[p.player];
     stats[zone].players.forEach(convert);
     if (stats[zone].favorite) convert(stats[zone].favorite);
   });

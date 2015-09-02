@@ -1,7 +1,8 @@
 /* global players */
 var playerMap = {};
-if (window.players) for (var i = 0; i < players.length; i++) {
-  playerMap[players[i].data] = players[i].label;
+for (var i = 0; i < players.length; i++) {
+  var p = players[i];
+  playerMap[p.id] = `#${p.number} - ${p.first} ${p.last}`;
 }
 
 module.exports = {
