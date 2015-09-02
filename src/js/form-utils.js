@@ -3,10 +3,10 @@ var $ = require("jquery");
 module.exports = {
   package: function(form) {
     var packet = {};
-    form.find("input[type!=checkbox][type!=radio],select,textarea,input:checked").each(function() {
+    form.find("input[type!=checkbox][type!=radio]:not(.view),select,textarea,input:checked").each(function() {
       var $this = $(this);
       if (this.hasAttribute("required") && !$this.val()) {
-        valid = false;
+        value = false;
       }
       var key = this.getAttribute("name");
       var value = $this.val();
@@ -15,6 +15,7 @@ module.exports = {
       }
       packet[key] = value;
     });
+    console.log(packet);
     return packet;
   },
   //returns true if pass, key name if fail

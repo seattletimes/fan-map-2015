@@ -32,10 +32,9 @@ inputs.on("keyup", "input", function(e) {
   var text = textInput.val();
   var re = new RegExp("\\b" + text, "i");
   var autocomplete = textInput.closest(".autocomplete");
+  var hiddenInput = autocomplete.find(".value");
   var state = autocomplete.data("state");
-  var list = players.filter(function(player) {
-    return player.label.match(re);
-  });
+  var list = players.filter(player => player.label.match(re));
   if (e.keyCode in keycodes) {
     state.index += keycodes[e.keyCode];
     state.index = state.index % list.length;
@@ -55,8 +54,8 @@ inputs.on("keyup", "input", function(e) {
     })
   });
   var selected = list[state.index];
-  state.value = selected ? selected.data : null;
-  autocomplete.find(".value").val(state.value);
+  state.value = selected ? selected.id : null;
+  hiddenInput.val(state.value);
   autocomplete.data("state", state);
   menu.html(contents);
   if (e.keyCode == 13) {

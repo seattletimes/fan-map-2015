@@ -29,7 +29,9 @@ if (cookie.read("sfm-sent")) {
   panel.addClass("sent");
 }
 
-form.on("click", ".submit", function() {
+form.on("click", ".submit", function(e) {
+
+  e.preventDefault();
 
   if (this.disabled) return;
 

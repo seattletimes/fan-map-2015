@@ -55,10 +55,8 @@ module.exports = {
         url: "all.json"
       });
       request.done(function(data) {
-        console.log(data);
         var markers = [];
         data.forEach(function(item) {
-          console.log(item.lat, item.lng);
           var marker = new leaflet.Marker([item.lat, item.lng], {
             icon: leaflet.divIcon({
               className: "fan-icon",

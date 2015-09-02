@@ -3,6 +3,7 @@ var playerMap = {};
 for (var i = 0; i < players.length; i++) {
   var p = players[i];
   playerMap[p.id] = `#${p.number} - ${p.first} ${p.last}`;
+  p.label = `#${p.number} - ${p.first} ${p.last}`;
 }
 
 module.exports = {
