@@ -1,12 +1,12 @@
 {
   "s3": {
     "stage": {
-      "bucket": "apps-stage.seattletimesdata.com",
-      "path": "spaced-sloth"
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "major-chop"
     },
     "live": {
       "bucket": "projects.seattletimes.com",
-      "path": "2014/hawks-fan-map"
+      "path": "2015/hawks-fan-map"
     }
   },
   "title": "Where in the world are Hawks fans?",

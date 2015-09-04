@@ -41,6 +41,11 @@ module.exports = {
             return key;
           }
         }
+        if (rule.length) {
+          if (value.length > rule.length) {
+            return key;
+          }
+        }
       }
     }
     return true;

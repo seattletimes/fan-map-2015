@@ -29,6 +29,13 @@ if (cookie.read("sfm-sent")) {
   panel.addClass("sent");
 }
 
+//character count
+var count = form.find(".note-length .count");
+form.find(`[name="note"]`).on("keyup change", function() {
+  count.html(this.value.length);
+  count.toggleClass("over", this.value.length > 500);
+});
+
 form.on("click", ".submit", function(e) {
 
   e.preventDefault();
@@ -39,7 +46,8 @@ form.on("click", ".submit", function(e) {
   var packet = formUtil.package(form);
   var valid = formUtil.validate(packet, {
     name: true,
-    location: { or: "gps" }
+    location: { or: "gps" },
+    note: { length: 500 }
   });
 
   if (valid !== true) {
