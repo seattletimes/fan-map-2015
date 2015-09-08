@@ -82,7 +82,7 @@ var gradations = [
   rgba(105, 127, 153),
   rgba(140, 162, 183),
   rgba(175, 197, 213),
-  rgba(210, 232, 243)
+  rgba(132, 132, 129)
 ].reverse();
 
 var color = function(metric) { //favorite, lifespan
