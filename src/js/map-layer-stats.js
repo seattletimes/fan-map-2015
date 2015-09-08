@@ -101,7 +101,7 @@ var color = function(metric) { //favorite, lifespan
 
       case "favorite":
         if (!stat.favorite) return nothing;
-        var color = playerPalette[stat.favorite.player] || rgba(221, 221, 200);
+        var color = playerPalette[stat.favorite.player] || rgba(132, 132, 129);
         return { color: color, stroke: false, fillOpacity: .7 };
 
       default:

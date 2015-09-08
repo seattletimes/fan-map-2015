@@ -108,4 +108,8 @@ $(".switch-layer").on("click", function() {
   facade.switchLayer(this.getAttribute("data-layer"), this.getAttribute("data-color"));
 });
 
+$(".show-layers").on("click", function() {
+  $(".layer.controls").toggleClass("activated");
+});
+
 module.exports = facade;

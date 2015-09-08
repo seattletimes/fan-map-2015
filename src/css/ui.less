@@ -18,24 +18,56 @@
   i.fa {
     margin-right: 5px;
   }
+
 }
 
 button, nav.switch-layer {
   .button();
 }
 
+.layer.controls {
+
+  nav.switch-layer {
+    display: none;
+  }
+
+  .show-layers {
+    color: #888;
+    width: 40px;
+
+    & > label { display: none }
+  }
+
+  &.activated {
+    nav.switch-layer {
+      display: block;
+    }
+
+    .show-layers {
+      color: @seaBlue;
+    }
+  }
+
+}
+
 nav.switch-layer {
   position: relative;
+  background: #F8F8F8;
+  color: #BBB;
+  transition: background .2s linear, color .2s linear;
 
   .key {
     display: block;
-    max-height: 0px;
+    // max-height: 0px;
     overflow: hidden;
     margin: 0;
     list-style-type: none;
     padding: 0;
-    transition: max-height 1s ease-in-out;
     font-size: 13px;
+
+    @media @mobile {
+      font-size: 11px;
+    }
 
     .key-box {
       opacity: 1;
@@ -50,7 +82,7 @@ nav.switch-layer {
 
     .thomas { color: rgb(207, 240, 158) }
 
-    .other { color: rgb(221, 221, 200) }
+    .other { color: rgb(132, 132, 129) }
 
     //lifespan colors
     // .year-color(@i) { color: hsl(270 - @i * 20, 40%, 70 - @i * 8%, 1) };
@@ -78,6 +110,9 @@ nav.switch-layer {
 
   &.active {
     border-top: 4px solid @seaBlue;
+    background: white;
+    color: @seaBlue;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .2);
 
     .key {
       max-height: 300px;
@@ -154,7 +189,7 @@ nav.switch-layer {
       top: 0px;
       right: 4px;
       cursor: pointer;
-      font-size: 24px;
+      font-size: 36px;
       color: @seaGray;
 
       &:hover {
