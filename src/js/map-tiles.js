@@ -3,9 +3,9 @@ var leaflet = require("leaflet");
 module.exports = {
 
   lite: leaflet.tileLayer(
-    "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
+    "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
     {
-      subdomains: "abcd".split(""),
+      subdomains: "abc",
       scheme: "xyz"
     }
   ),
