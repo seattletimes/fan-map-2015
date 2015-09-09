@@ -3,6 +3,7 @@ var formUtil = require("./form-utils");
 var cookie = require("./cookies");
 require("./location-input");
 require("./autocomplete");
+var cookieName = "fan-map-2015-sent";
 
 /*
 Form user-flow:
@@ -25,7 +26,7 @@ var form = panel.find(".form");
 form.find(".submit").attr("disabled", null);
 
 //do not show form if it has been submitted before
-if (cookie.read("sfm-sent")) {
+if (cookie.read(cookieName)) {
   panel.addClass("sent");
 }
 
@@ -69,7 +70,7 @@ form.on("click", ".submit", function(e) {
   submission.done(data => {
     panel.addClass("sent");
     message.html("Thanks!");
-    cookie.write("sfm-sent", true);
+    cookie.write(cookieName, true);
   });
 
   submission.fail(() => {
@@ -83,4 +84,4 @@ $(document.body).on("click", ".show-form", () => panel.toggleClass("show"));
 
 form.on("focus", "input,textarea", () => panel.removeClass("invalid"));
 
-window.clearSent = () => cookie.clear("sfm-sent");
+window.clearSent = () => cookie.clear(cookieName);

@@ -15,7 +15,7 @@
       <a href="http://seattletimes.com" class="logo">
         <img src="http://seattletimes.com/art/ui/seattletimeslogo_home.svg">
       </a>
-      <!-- <%= t.include("partials/_ad.html", { type: "banner" }) %> -->
+      <!--  -->
       <!-- <div class="sponsorship"><span class="accent">Sponsored by</span> YOUR NAME HERE</div> -->
       <a class="share"></a>
     </nav>
@@ -33,6 +33,7 @@
     <div class="overlay">
       <div class="modal">
         <a class="close"><i class="fa fa-times"></i></a>
+
         <h1>Where in the world are <span class="accent">Hawks fans?</span></h1>
 
         <p>See the locations of Seahawks fans around the world. Click the <span class="accent add-yourself-tease"><i class="fa fa-thumb-tack"></i> Add yourself!</span> button to put your own marker on the map and share your fan story.
@@ -43,6 +44,9 @@
           <li><strong>Interactive:</strong> Thomas Wilburn
           <li><strong>Map tiles and data:</strong> <a href="http://stamen.com">Stamen Design</a>, <a href="http://openstreetmap.org">OpenStreetMap</a>
         </ul>
+
+        <%= t.include("partials/_ad.html", { type: "banner" }) %>
+
       </div>
     </div>
 

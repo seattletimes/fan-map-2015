@@ -6,7 +6,7 @@ Runs tasks on an automated basis
 
 /** config variables **/
 
-var branch = "prod"; //Git branch for deployment
+var branch = "live"; //Git branch for deployment
 var interval = 1000 * 3; //30 minutes by default
 var commands = [
   "git checkout " + branch,
