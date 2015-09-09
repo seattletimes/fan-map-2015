@@ -1,11 +1,12 @@
 var $ = require("jquery");
 var cookie = require("./cookies");
+var cName = "fan-map-2015";
 
 var overlay = $(".overlay");
 
-if (!cookie.read("sfm-visited")) {
+if (!cookie.read(cName)) {
   overlay.addClass("show visible");
-  cookie.write("sfm-visited", "true");
+  cookie.write(cName, "true");
 }
 
 var closeOverlay = function(e) {
@@ -27,3 +28,5 @@ $(document.body).on("click", ".show-dialog", function() {
     overlay.addClass("visible");
   }, 100);
 });
+
+window.clearModal = () => cookie.clear(cName)

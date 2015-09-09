@@ -6,8 +6,8 @@ var ich = require("icanhaz");
 var map = null;
 var popup = leaflet.popup({
   className: "fan-popup",
-  maxHeight: 320,
-  minWidth: 240
+  // minWidth: 240,
+  maxHeight: 320
 });
 
 ich.addTemplate("popup", template);
@@ -21,6 +21,12 @@ var lives = {
   "20+": "20 - 30 years",
   "30+": "30+ years"
 };
+
+var panel = document.querySelector(".response-panel");
+var panelContent = document.querySelector(".response-panel .content");
+var closeButton = document.querySelector(".response-panel .close");
+
+closeButton.addEventListener("click", () => panel.classList.remove("show"));
 
 module.exports = {
   instance: popup,
@@ -43,9 +49,11 @@ module.exports = {
     var content = ich.popup({
       fans: data
     }, true);
-    popup.setContent(content);
+    popup.setContent(`${data.length} fan${data.length > 1 ? "s" : ""}`);
     popup.setLatLng(marker.getLatLng());
     popup.openOn(map);
+    panelContent.innerHTML = content;
+    panel.classList.add("show");
   },
   setMap: function(m) {
     map = m;

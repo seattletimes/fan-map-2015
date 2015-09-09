@@ -15,7 +15,8 @@
       <a href="http://seattletimes.com" class="logo">
         <img src="http://seattletimes.com/art/ui/seattletimeslogo_home.svg">
       </a>
-      <div class="sponsorship"><span class="accent">Sponsored by</span> ALASKA?</div>
+      <!--  -->
+      <!-- <div class="sponsorship"><span class="accent">Sponsored by</span> YOUR NAME HERE</div> -->
       <a class="share"></a>
     </nav>
 
@@ -23,23 +24,46 @@
 
     <%= t.include("_form.html") %>
 
+    <div class="response-panel">
+      <i class="fa fa-times-circle close"></i>
+      <h1 class="headline">Responses</h1>
+      <div class="content"></div>
+    </div>
+
     <div class="overlay">
       <div class="modal">
         <a class="close"><i class="fa fa-times"></i></a>
+
         <h1>Where in the world are <span class="accent">Hawks fans?</span></h1>
 
-        <p>See the locations of Seahawks fans around the world. Click the <span class="accent add-yourself-tease"><i class="fa fa-thumb-tack"></i> Add yourself!</span> button to put your own marker on the map and share your fan story.
+        <p>See the locations of Seahawks fans around the world. Click the <span class="accent add-yourself-tease"><i class="fa fa-thumb-tack"></i> Add yourself!</span> button to put your own marker on the map and share your greatest Seahawks moment.
 
         <p class="small-print"><strong>Small print:</strong> Your entry may be featured online and/or in print. Entries will be published daily, and entries that are determined to be fraudulent or inappropriate will be removed.
 
         <ul class="credits">
           <li><strong>Interactive:</strong> Thomas Wilburn
-          <li><strong>Map tiles and data:</strong> <a href="http://stamen.com">Stamen Design</a>, <a href="http://openstreetmap.org">OpenStreetMap</a>
+          <li><strong>Map data:</strong> <a href="http://www.openstreetmap.org/copyright" target="_top">OpenStreetMap</a> contributors, <a href="http://cartodb.com/attributions" target="_top">CartoDB</a>
         </ul>
+
+        <%= t.include("partials/_ad.html", { type: "banner" }) %>
+
       </div>
     </div>
 
-    <div class="controls">
+    <div class="toggle controls">
+
+      <button class="show-form">
+        <i class="fa fa-thumb-tack"></i>
+        <label>Add yourself!</label>
+      </button>
+      
+      <button class="show-dialog">
+        <i class="fa fa-question-circle"></i>
+        <label>About this map</label>
+      </button>
+    </div>
+
+    <div class="layer controls">
 
       <nav class="switch-layer" data-layer="stats" data-color="favorite">
         <label>Favorite player</label> <i class="wait fa fa-clock-o"></i><i class="current fa fa-angle-down"></i>
@@ -74,17 +98,11 @@
         </ul>
       </nav>
 
-      <hr>
+      <button class="show-layers">
+        <i class="fa fa-navicon"></i>
+        <label>Layers</label>
+      </button>
 
-      <button class="show-form">
-        <i class="fa fa-thumb-tack"></i>
-        Add yourself!
-      </button>
-      
-      <button class="show-dialog">
-        <i class="fa fa-question-circle"></i>
-        About this map
-      </button>
     </div>
 
     <script>

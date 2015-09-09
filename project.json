@@ -1,17 +1,19 @@
 {
   "s3": {
     "stage": {
-      "bucket": "apps-stage.seattletimesdata.com",
-      "path": "spaced-sloth"
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "major-chop"
     },
     "live": {
       "bucket": "projects.seattletimes.com",
-      "path": "2014/hawks-fan-map"
+      "path": "2015/hawks-fan-map"
     }
   },
   "title": "Where in the world are Hawks fans?",
   "description": "Find the locations of Seahawks fans around the world, and put your own marker on our interactive map.",
-  "url": "http://projects.seattletimes.com/2014/hawks-fan-map",
-  "slug": "hawks-fan-map-2014",
-  "tags": ["sports", "seahawks", "football", "fans", "ugc"]
+  "url": "http://projects.seattletimes.com/2015/hawks-fan-map/",
+  "slug": "hawks-fan-map-2015",
+  "image": "assets/social.jpg",
+  "tags": ["sports", "seahawks", "football", "fans", "ugc"],
+  "production": true
 }
