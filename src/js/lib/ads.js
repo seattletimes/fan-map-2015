@@ -1,4 +1,4 @@
-  var tag = window.googletag = window.googletag || { cmd: [], seatimes: { unit: "/81279359/seattletimes.com" } };
+  var tag = window.googletag = window.googletag || { cmd: [], seatimes: { unit: "/81279359/seattletimes.com/sports/seahawks" } };
   
   var bannerMapping = { 
     768: [[728,90]],
