@@ -68,10 +68,10 @@ var init = function(world, states, stats) {
 };
 
 var playerPalette = {
-  "3": rgba(11, 72, 107),
-  "25": rgba(59, 134, 134),
-  "24": rgba(121, 189, 154),
-  "29": rgba(207, 240, 158)
+  "84": rgba(11, 72, 107),
+  "64": rgba(59, 134, 134),
+  "36": rgba(121, 189, 154),
+  "74": rgba(207, 240, 158)
 };
 var lifespans = ["1", "2", "3+", "5+", "10+", "20+", "30+"];
 // var gradations = lifespans.map(function(_, i) { return hsl(270 - i * 20, 40, 70 - i * 8) });
