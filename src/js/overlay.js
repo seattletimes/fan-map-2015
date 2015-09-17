@@ -4,10 +4,11 @@ var cName = "fan-map-2015";
 
 var overlay = $(".overlay");
 
-if (!cookie.read(cName)) {
-  overlay.addClass("show visible");
-  cookie.write(cName, "true");
-}
+// Apparently this is ad fraud or something.
+// if (!cookie.read(cName)) {
+//   overlay.addClass("show visible");
+//   cookie.write(cName, "true");
+// }
 
 var closeOverlay = function(e) {
   var $target = $(e.target);
